@@ -1,0 +1,46 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+/* Bloque dos */
+.bloque2 {
+    background-color: #000; /* Fondo negro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh; /* Altura del bloque */
+  }
+  
+  /* Contenedor dentro del bloque */
+  .bloque2Container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  /* Estilos del texto */
+  .bloque2Container h2 {
+    color: #fff; /* Texto blanco */
+    font-size:1.4rem;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+  
+  /* Responsivo para pantallas grandes */
+  @media (min-width: 1020px) {
+    .bloque2Container h2 {
+      font-size: 2.5rem; /* Texto más grande en pantallas grandes */
+      width: 60rem;
+    }
+  }
+  
+  /* Responsivo para pantallas móviles */
+  @media (max-width: 1019px) {
+    .bloque2Container h2 {
+      font-size: 1.8rem; /* Texto más pequeño en pantallas móviles */
+      line-height: 2rem;
+      width:40rem ;
+      line-height: 1.5;
+    }
+  }
+  
