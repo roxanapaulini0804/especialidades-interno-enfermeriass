@@ -27,50 +27,48 @@ html(lang="es")
     
     
     body
-        
-       
-
-
-            
-               
-
+         
 
         .bloque1
-            .bloque1Background
             .bloque1Container
-                .bloque1Left
-                    img.bloque1LeftLogo(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/logo-movil.webp", alt="Logo Universidad Peruana Cayetano Heredia")
-                    .bloque1LeftTitle
-                        h3 Segundas Especialidades Profesionales en
-                        h2 Enfermería
-
-            .bloque2Wrapper
-                img.bloque1FormLogo(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/logo-movil.webpp", alt="Logo Universidad Peruana Cayetano Heredia")
-                .bloque2RightTitle
-                    h3 Especialízate en
-                        span tu profesión
-                    h4 Déjanos tus datos para brindarte una atención personalizada.
-                .bloque2Form
-                    .bloque2InputDouble
+                .bloque1Background
+                    //- https://lp.cayetano.edu.pe/wp-content/uploads/2024/10/beca18_logo-scaled.webp
+                    //- img(src="img/beca18evento-logo.webp", alt="")
+                    img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/10/beca18_logo-scaled.webp", alt="")
+                    .bloque1BackgroundText
+                        h2 Segundas Especialidades Profesionales en 
+                        h1 Enfermeria
+                        //- img(src="img/beca18evento-pronabec-mobil.webp", alt="")
+                        //- img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/beca18evento-pronabec-mobil.webp", alt="")
+                        //- h4 Admisión 2025
+                        //- h2 ¡Cerramos Inscripciones!
+                .bloque1FormContent
+                    //- img.bloque1FormContentMobile1(src="img/shield-mobile-1.webp", alt="")
+                    //- img.bloque1FormContentMobile2(src="img/shield-mobile-2.webp", alt="")
+                    img.bloque1FormContentMobile1(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/shield-mobile-1.webp", alt="")
+                    img.bloque1FormContentMobile2(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/shield-mobile-2.webp", alt="")
+                    //- h4 ¡Cerramos Inscripciones!
+                    .bloque1Form
+                        .bloque1FormTitle
+                            h3 Especialízate en
+                                span  tu profesión
                         input(type="text" placeholder="Nombres*")
                         input(type="text" placeholder="Apellidos*")
-                    input(type="email" placeholder="E-mail*")
-                    input(type="text" placeholder="N° de Whatsapp*")
-                    .bloque2InputDouble
-                        input(type="text" placeholder="Tipo de doc.*")
-                        input(type="text" placeholder="N° de doc*")
-                    .bloque2InputDouble
-                        input(type="text" placeholder="País*")
-                        input(type="text" placeholder="Provincia*")
-                    input(type="text" placeholder="Grado Académico*")
-                    .bloque2Terminos
-                        input(type="checkbox" name="check")
-                        label(for="check") Política de privacidad y los términos de servicio.
-                    .bloque2Button
-                        button(type="submit") Enviar
-
-
-        
+                        input(type="text" placeholder="Tipo de documento*")
+                        input.inputNumber(type="number" placeholder="Número de documento*" inputmode="numeric")
+                        input(type="text" placeholder="Celular*")
+                        input(type="text" placeholder="Correo electrónico*")
+                        input(type="text" placeholder="Ciudad*")
+                        input(type="text" placeholder="Elige tu carrera*")
+                        .bloque1TopFormContainer--terminos
+                            input(type="checkbox", name="")
+                            h3 Política de privacidad y términos de servicio.
+                        .captcha
+                            #recap3503766000237491098.g-recaptcha(data-sitekey='6LdqkDoiAAAAALdLtgIzFUQelkS9jGZU4W7gjLHG' data-theme='light' data-callback='rccallback3503766000237491098' captcha-verified='false')
+                            #recapErr3503766000237491098(style='font-size:12px;color:red;visibility:hidden;') Error en validación de Captcha. Si no es un robot, inténtelo de nuevo.
+                        .bloque1FormButton
+                            button
+                                h3 Quiero más información
         .bloque2
             .bloque2Container
                 h2 Desarrolla competencias para el cuidado integral y especializado de las personas, y lidera el cuidado de la salud.
@@ -96,7 +94,7 @@ html(lang="es")
                             .card-content-movil
                               .text-container-movil
                                 h4 Segunda Especialidad en 
-                                h3 Centro Quirúrgico Especializado
+                                h3 Cuidados Intensivos Neonatales
                                 a(href="#") Ver programa →
                                 button Quiero inscribirme
                         .card-movil
@@ -104,7 +102,7 @@ html(lang="es")
                             .card-content-movil
                               .text-container-movil
                                 h4 Segunda Especialidad en 
-                                h3 Centro Quirúrgico Especializado
+                                h3 Cuidados Nefrológicos
                                 a(href="#") Ver programa →
                                 button Quiero inscribirme
                         .card-movil
@@ -112,7 +110,8 @@ html(lang="es")
                             .card-content-movil
                               .text-container-movil
                                 h4 Segunda Especialidad en 
-                                h3 Centro Quirúrgico Especializado
+                                h3 Emergencias y Desastres
+
                                 a(href="#") Ver programa →
                                 button Quiero inscribirme
                     // Grilla desktop
@@ -131,7 +130,7 @@ html(lang="es")
                                 .card-content
                                   .text-container
                                     h4 Segunda Especialidad en
-                                    h3 Centro Quirúrgico Especializado
+                                    h3 Cuidados Intensivos Neonatales
                                     a(href="#") Ver programa →
                                     button Quiero inscribirme
                                 
@@ -157,43 +156,26 @@ html(lang="es")
             .bloque5Subtitle
                 p Nuestros programas están diseñados para potenciar tus habilidades y convertirte en un referente en el cuidado de la salud.
 
-            // Versión Desktop
-            .bloque5-grid
-                .bloque5-text
-                    h2 ¿Por qué elegir Cayetano?
-                    p Nuestros programas están diseñados para potenciar tus habilidades y convertirte en un referente en el cuidado de la salud.
+           
                 .bloque5-icons
                     .bloque5-item
-                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/pge-enfermeria-icon4.webp", alt="+62 años de excelencia")
+                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/62-anos-de-excelencia-1.webp", alt="+62 años de excelencia")
                         .bloque5-icon-text
                             h4 +62 años de excelencia académica.
                             p Aprende de docentes destacados y activos en el sector.
-                    .bloque5-item
-                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/pge-enfermeria-icon4.webp", alt="Pasantías")
-                        .bloque5-icon-text
-                            h4 Pasantías nacionales e internacionales
-                            p Obtén más experiencia en tu campo.
-                    .bloque5-item
-                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/pge-enfermeria-icon4.webp", alt="Horarios flexibles")
-                        .bloque5-icon-text
-                            h4 Horarios flexibles
-                            p Clases virtuales los jueves y clases presenciales una vez al mes.
+                        .bloque5-item
+                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/pasantias-nacionales-1.webp", alt="Pasantías")
+                            .bloque5-icon-text
+                                h4 Pasantías nacionales e internacionales
+                                p Obtén más experiencia en tu campo.
+                        .bloque5-item
+                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/horarios-flexibles-1.webp", alt="Horarios flexibles")
+                            .bloque5-icon-text
+                                h4 Horarios flexibles
+                                p Clases virtuales los jueves y clases presenciales una vez al mes.
 
 
-            .bloque5-carousel
-                .bloque5-item
-                    img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/pge-enfermeria-icon4.webp", alt="+62 años de excelencia")
-                    h4 +62 años de excelencia académica
-                    p Aprende de docentes destacados y activos en el sector.
-                .bloque5-item
-                    img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/pge-enfermeria-icon4.webp", alt="Pasantías")
-                    h4 Pasantías nacionales e internacionales
-                    p Obtén más experiencia en tu campo.
-                .bloque5-item
-                    img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/pge-enfermeria-icon4.webp", alt="Horarios flexibles")
-                    h4 Horarios flexibles
-                    p Clases virtuales los jueves y clases presenciales una vez al mes.
-
+         
             
 
 
