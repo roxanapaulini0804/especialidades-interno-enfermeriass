@@ -14,7 +14,7 @@
 
 .bloque1Container {
     @include m.desktop_1020 {
-        background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/LP-interna-Enfermeria.webp');
+        background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/foto-enfermeria-interno.webp');
         background-size: cover;
         background-position: center;
         background-repeat: none;
@@ -38,7 +38,7 @@
 
 .bloque1Background {
     // background-image: url('../img/beca18-simulacro-image-top-mobile.webp');
-    background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/LP-interna-Enfermeria.webp');
+    background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/foto-enfermeria-interno.webp');
     background-size: cover;
     background-position: center;
     background-repeat: none;
@@ -336,5 +336,52 @@
     }
     @include m.desktop_1200 {
         transform: scale(0.72);
+    }
+}
+
+
+.bloque1LeftSubtitle {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    row-gap: .3rem;
+    position: relative;
+    img {
+        position: absolute;
+        width: 2.5rem;
+        height: auto;
+        left: -.9rem;
+        z-index: 2;
+        top: -.8rem;
+        @include m.desktop_1020 {
+            width: 3.4rem;
+            top: -1rem;
+            left: -1rem;
+        }
+        @include m.desktop_1200 {
+            top: -.8rem;
+        }
+    }
+    h3, h4 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 1.8rem;
+        position: relative;
+        z-index: 5;
+       
+        @include m.desktop_1200 {
+            font-size: 8rem;
+        }
+    }
+    h4 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        width: 35rem;
+        @include m.desktop_1020 {
+            font-size: 2.5rem;
+        }
+        @include m.desktop_1200 {
+            font-size: 3.8rem;
+        }
     }
 }

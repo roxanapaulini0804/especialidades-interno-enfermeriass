@@ -5,27 +5,46 @@
 
 .bloque3 {
   background-color: #f3f3f3;
-  padding: 2rem 1rem; /* Espaciado general del bloque */
+  padding: 2rem 1rem;
   text-align: center;
 
   .bloque3-title {
-      margin-bottom: 5rem; /* Espaciado inferior */
-      text-align: center; /* Centra el texto */
+      margin-bottom: 5rem; 
+      text-align: center;
   }
 
   .bloque3-title h2 {
-      font-size: 2.5rem; /* Tamaño de fuente ajustable */
-      font-weight: bold; /* Negrita */
+      font-size: 5rem; /* Tamaño de fuente ajustable */
+      font-weight: 350; /* Negrita */
       color: #000; /* Color del texto */
       line-height: 1.2; /* Altura de línea */
       text-align: center; /* Centrado */
       margin: 5rem auto;
-      max-width: 420px; /* Ancho máximo del texto */
+      //max-width: 500; /* Ancho máximo del texto */
+      @include m.phone_375 {
+        font-size: 3rem;
+      }
+      @include m.tablet_800 {
+        font-size: 3rem;
+        width: 50rem;
+        
+      }
+      @include m.desktop_1020 {
+        font-size: 3rem;
+        width: 50rem;
+        
+      
+       
+    }
   }
 
   @media (max-width: 768px) {
       .bloque3-title h2 {
-          font-size: 1.5rem; /* Tamaño más pequeño en móviles */
+          font-size: 2rem; /* Tamaño más pequeño en móviles */
+          width:25rem ;
+      .bloque3-title span{
+          font-weight: 400;
+      }
       }
   }
 }
@@ -43,10 +62,11 @@
   /* Carrusel móvil */
   .carousel-movil {
     display: flex;
-    gap: 1rem; /* Aumenta el espacio entre las tarjetas */
+    gap: 2rem; /* Aumenta el espacio entre las tarjetas */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding: 2rem; /* Añade espacio alrededor del carrusel */
+    padding: 4rem; /* Añade espacio alrededor del carrusel */
+    padding-bottom: 5rem;
 
     .card-movil {
         flex: 0 0 auto; /* Cards no se encogen ni se expanden */
@@ -70,7 +90,7 @@
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            height: 150px;
+            height: 180px;
 
             .text-container-movil {
                 display: flex;
@@ -88,7 +108,7 @@
                 }
 
                 h3 {
-                    font-size: 1.5rem; /* Reduce el tamaño del título */
+                    font-size: 1.6rem; /* Reduce el tamaño del título */
                     font-weight: bold;
                     color: #fff;
                     margin: 0;
@@ -98,18 +118,20 @@
             }
 
             a {
-                font-size: 1.2rem; /* Reduce el tamaño del enlace */
+                font-size: 1.5rem; /* Reduce el tamaño del enlace */
                 color: #fff;
                 margin-top: auto;
-                text-align: left;
+                text-align: center;
+                padding-top: 3.5rem;
             }
 
             button {
                 font-size: 1.5rem; /* Reduce el tamaño del botón */
                 padding: 0.5rem;
                 background-color: #ff0000;
-                color: #fff;
+                color: black;
                 border: none;
+                font-weight: bold;
                 border-radius: 8px;
                 cursor: pointer;
                 margin-top: 0.5rem; /* Reduce el margen superior */
@@ -219,6 +241,7 @@
   
     .carousel-movil {
       display: flex; /* Muestra el carrusel móvil en pantallas pequeñas */
+      
     }
   }
   
