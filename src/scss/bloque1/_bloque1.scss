@@ -2,10 +2,12 @@
 @use 'base/mixins' as m;
 
 
+* {
+    box-sizing: border-box;
+}
+
 .bloque1 {
-    // display: none;
-    //overflow: hidden;
-    
+    overflow-x: hidden; // Evita desbordes horizontales
 }
 
 //https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/beca18-simulacro-image-top-scaled.webp

@@ -115,4 +115,56 @@ window.addEventListener('scroll', (e) => {
  
 
 
+const carouselInner = document.querySelector('.carouselInner');
+const carouselItems = document.querySelectorAll('.carouselItem');
+const prevButton = document.querySelector('.carouselPrev');
+const nextButton = document.querySelector('.carouselNext');
+const indicators = document.querySelectorAll('.carouselIndicators button');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+    const offset = -currentIndex * 100; // Mueve el carrusel
+    carouselInner.style.transform = `translateX(${offset}%)`;
+
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentIndex);
+    });
+}
+
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+    updateCarousel();
+});
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % carouselItems.length;
+    updateCarousel();
+});
+
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+    });
+});
+
+updateCarousel(); // Inicializa el carrusel
+
+
+// JavaScript para manejar el desplazamiento del carrusel en móvil
+document.querySelector('.btn-nav-prev').addEventListener('click', function() {
+    document.querySelector('.carousel-movil').scrollBy({
+        left: -220, // Ajusta el valor según el tamaño de las tarjetas
+        behavior: 'smooth'
+    });
+});
+
+document.querySelector('.btn-nav-next').addEventListener('click', function() {
+    document.querySelector('.carousel-movil').scrollBy({
+        left: 220, // Ajusta el valor según el tamaño de las tarjetas
+        behavior: 'smooth'
+    });
+});
+
 

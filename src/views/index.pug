@@ -114,6 +114,9 @@ html(lang="es")
 
                                 a(href="#") Ver programa →
                                 button Quiero inscribirme
+                        .carousel-nav
+                            button.btn-nav-prev(type="button") ←
+                            button.btn-nav-next(type="button") →
                     // Grilla desktop
                     .carousel-desktop
                             .card-desktop
@@ -152,27 +155,62 @@ html(lang="es")
                                     button Quiero inscribirme
 
         .bloque5
-            .bloque5Title ¿Por qué elegir Cayetano?
-            .bloque5Subtitle
-                p Nuestros programas están diseñados para potenciar tus habilidades y convertirte en un referente en el cuidado de la salud.
+            .bloque5Container
 
-           
-                .bloque5-icons
-                    .bloque5-item
-                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/62-anos-de-excelencia-1.webp", alt="+62 años de excelencia")
-                        .bloque5-icon-text
-                            h4 +62 años de excelencia académica.
+                // Título y subtítulo para desktop
+                .bloque5Left.bloque5Desktop
+                    .bloque5Title
+                        h2 ¿Por qué elegir Cayetano?
+                        p Nuestros programas están diseñados para potenciar tus habilidades y convertirte en un referente en el cuidado de la salud.
+
+                // Título y subtítulo para móvil
+                .bloque5Left.bloque5Mobile
+                    .bloque5Title
+                        h2 ¿Por qué elegir Cayetano?
+                        p Nuestros programas están diseñados para potenciar tus habilidades y convertirte en un referente en el cuidado de la salud.
+
+                // Contenido para desktop
+                .bloque5Content.bloque5Desktop
+                    .bloque5Item
+                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/62-anos-de-excelencia-1.webp", alt="62 años de excelencia")
+                        .bloque5Text
+                            h3 +62 años de excelencia académica.
                             p Aprende de docentes destacados y activos en el sector.
-                        .bloque5-item
-                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/pasantias-nacionales-1.webp", alt="Pasantías")
-                            .bloque5-icon-text
-                                h4 Pasantías nacionales e internacionales
+                    .bloque5Item
+                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/pasantias-nacionales-1.webp", alt="Pasantías")
+                        .bloque5Text
+                            h3 Pasantías nacionales e internacionales
+                            p Obtén más experiencia en tu campo.
+                    .bloque5Item
+                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/horarios-flexibles-1.webp", alt="Horarios flexibles")
+                        .bloque5Text
+                            h3 Horarios flexibles
+                            p Clases virtuales los jueves y clases presenciales una vez al mes.
+                
+                .bloque5Content.bloque5Mobile
+                    .carousel
+                        .carouselInner
+                            .carouselItem
+                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/62-anos-de-excelencia-1.webp", alt="62 años de excelencia")
+                                h3 +62 años de excelencia académica.
+                                p Aprende de docentes destacados y activos en el sector.
+                            .carouselItem
+                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/pasantias-nacionales-1.webp", alt="Pasantías")
+                                h3 Pasantías nacionales e internacionales
                                 p Obtén más experiencia en tu campo.
-                        .bloque5-item
-                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/horarios-flexibles-1.webp", alt="Horarios flexibles")
-                            .bloque5-icon-text
-                                h4 Horarios flexibles
+                            .carouselItem
+                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/horarios-flexibles-1.webp", alt="Horarios flexibles")
+                                h3 Horarios flexibles
                                 p Clases virtuales los jueves y clases presenciales una vez al mes.
+                        .carouselControls
+                            button.carouselPrev ←
+                            button.carouselNext →
+                        .carouselIndicators
+                            button(data-index="0") ●
+                            button(data-index="1") ●
+                            button(data-index="2") ●
+                            
+                    
 
 
          
