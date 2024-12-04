@@ -2,150 +2,97 @@
 @use 'base/mixins' as m;
 
 .bloque6 {
-    height: auto;
-    background-color: v.$cuarto;
-    padding: v.$separator_movil;
-    position: relative;
-    overflow: hidden;
-    z-index: 30;
-    .bloque6ImageDesktop {
-        display: none;
-        @include m.desktop_1020 {
-            display: block;
-            position: absolute;
-            width: 39.2%;
-            right: 0;
-            bottom: 0;
-            z-index: 1;
-        }
-        // @include m.desktop_1040 {
-        //     width: 40.8rem;    
-        // }
-        // @include m.desktop_1060 {
-        //     width: 41.5rem;    
-        // }
-        // @include m.desktop_1080 {
-        //     width: 42.3rem;
-        // }
-        // @include m.desktop_1100 {
-        //     width: 43rem;
-        // }
-        @include m.desktop_1120 {
-            // width: 39.15%;
-        }
-        // @include m.desktop_1200 {
-        //     width:49.9rem;
-        // }
-    }
+    background-color: #00bcd4; /* Fondo */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 40px 20px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
 }
 
 .bloque6Container {
-    @include m.desktop_1020 {
-        width: 50%;
-        padding-left: 6rem;
+    max-width: 600px; /* Ancho máximo del contenedor */
+    width: 100%; /* Ancho completo hasta el máximo */
+    padding: 20px; /* Espaciado interno */
+    
+    border-radius: 10px; /* Bordes redondeados */
+    
+}
+
+.bloque6Titulo {
+    font-size: 24px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    color: #ffffff; /* Color del texto */
+    margin: 0 0 20px; /* Espacio inferior */
+}
+
+.bloque6Titulo span {
+    font-weight: bold; /* Negrita adicional */
+}
+
+.bloque6Boton {
+    display: inline-block;
+    background-color: #000; /* Fondo del botón */
+    color: #fff; /* Color del texto */
+    text-decoration: none;
+    padding: 10px 20px; /* Tamaño del botón */
+    border-radius: 20px; /* Bordes redondeados */
+    font-weight: bold;
+    font-size: 16px; /* Tamaño del texto */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 769px) {
+    .bloque6Container {
+        max-width: 700px; /* Aumentar el tamaño en pantallas grandes */
+        padding: 40px; /* Más espacio interno */
+    }
+
+    .bloque6Titulo {
+        font-size: 28px; /* Texto más grande */
+    }
+
+    .bloque6Boton {
+        padding: 15px 30px; /* Botón más grande */
+        font-size: 18px; /* Texto del botón más grande */
     }
 }
 
-.bloque6Left {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    @include m.desktop_1020 {
-        align-items: flex-start;
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .bloque6Container {
+        padding: 20px; /* Reducir el espaciado interno */
     }
-    .bloque6Title {
-        display: flex;
-        flex-direction: column;
-        justify-items: center;
-        align-items: center;
-        @include m.desktop_1020 {
-            align-items: flex-start;
-        }
-        h3 {
-            font-size: v.$phone_title_size;
-            width: 21rem;
-            margin: 0;
-            color: black;
-            font-weight: 400;
-            text-align: center;
-            z-index: 20;
-            position: relative;
-            @include m.desktop_1020 {
-                width: 100%;
-                text-align: left;
-                font-size: v.$desktop_title_size;
-            }
-            span {
-                font-weight: 800;
-            }
-        }
+
+    .bloque6Titulo {
+        font-size: 22px; /* Texto más pequeño */
+    }
+
+    .bloque6Boton {
+        padding: 10px 20px; /* Tamaño reducido del botón */
     }
 }
 
-.bloque6Tutor {
-    // background-color: green;
-    width: 25rem;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    row-gap: 1.5rem;
-    @include m.desktop_1020 {
-        width: 100%;
-        flex-direction: row;
-        column-gap: 2rem;
-        margin-top: 2rem;
-    }
-    img {
-        width: 15rem;
-    }
-    h3 {
-        margin: 0;
-        text-align: center;
-        font-size: 1.4rem;
-        font-weight: 500;
-        @include m.desktop_1020 {
-            text-align: start;
-            font-size: 1.6rem;
-            position: relative;
-            z-index: 10;
-        }
-    }
-    .bloque6TutorTitle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: .5rem;
-        @include m.desktop_1020 {
-            align-items: flex-start;
-            width: 100%;
-        }
-        h3, h4 {
-            margin: 0;
-            font-weight: 500;
-            font-size: 1.8rem;
-            @include m.desktop_1020 {
-                font-size: 2.2rem;
-            }
-        }
-        h4 {
-            font-weight: 800;
-            font-size: 1.2rem;
-            @include m.desktop_1020 {
-                font-size: 1.5rem;
-            }
-        }
+
+@media (min-width: 999px) {
+    .bloque6 {
+        background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/bloque6-escudo-negro.png'); /* URL de la imagen */
+        background-size: contain; /* Ajustar el tamaño para que se adapte */
+        background-position: right center; /* Posicionar pegado al lado derecho */
+        background-repeat: no-repeat; /* No repetir la imagen */
     }
 }
 
-.bloque6TutorDesktop {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    row-gap: 1.5rem;
+@media (max-width: 999px) {
+    .bloque6 {
+        background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/background-movile-bloque-6.png'); /* URL del background para móviles */
+        background-size: cover; /* Ajustar para que ocupe todo el contenedor */
+        background-position: center; /* Centrado */
+        background-repeat: no-repeat; /* Evitar repetición */
+    .bloque6Titulo {
+            color: #000; /* Cambiar el color del texto a negro */
+            
+    }
+}
 }

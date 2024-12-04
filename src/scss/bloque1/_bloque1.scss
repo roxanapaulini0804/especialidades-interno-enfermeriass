@@ -153,11 +153,11 @@
         @include m.desktop_1020 {
             display: block;
             color: white;
-            width: 30rem;
+            width: 20rem;
             background-color: black;
             font-size: 3.5rem;
             text-align: center;
-            padding: 1rem;
+            padding: 5rem;
             border-radius: 1.5rem;
         }
     }
@@ -194,7 +194,7 @@
 
 .bloque1Form {
     background-color: white;
-    width: 28rem;
+    width: 35rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -209,7 +209,7 @@
         width: 32rem;
     }
     @include m.desktop_1400 {
-        width: 36rem;
+        width: 50rem;
     }
     input[type="number"]::-webkit-inner-spin-button, 
     input[type="number"]::-webkit-outer-spin-button {
@@ -247,7 +247,7 @@
             width: 18rem;
         }
         @include m.desktop_1400 {
-            width: 28rem;
+            width: 20rem;
         }
         span {
             font-weight: 800;
@@ -339,49 +339,49 @@
     }
 }
 
-
 .bloque1LeftSubtitle {
-    color: black;
+    color: black; /* Color del texto */
     display: flex;
-    flex-direction: column;
-    row-gap: .3rem;
-    position: relative;
-    img {
-        position: absolute;
-        width: 2.5rem;
-        height: auto;
-        left: -.9rem;
-        z-index: 2;
-        top: -.8rem;
-        @include m.desktop_1020 {
-            width: 3.4rem;
-            top: -1rem;
-            left: -1rem;
-        }
-        @include m.desktop_1200 {
-            top: -.8rem;
-        }
-    }
-    h3, h4 {
-        margin: 0;
-        font-weight: 600;
-        font-size: 1.8rem;
-        position: relative;
-        z-index: 5;
-       
-        @include m.desktop_1200 {
-            font-size: 8rem;
-        }
-    }
-    h4 {
-        font-size: 2.5rem;
-        font-weight: 400;
-        width: 35rem;
-        @include m.desktop_1020 {
-            font-size: 2.5rem;
-        }
-        @include m.desktop_1200 {
-            font-size: 3.8rem;
-        }
-    }
+    flex-direction: column; /* Alinear texto verticalmente */
+    row-gap: 1.2rem; /* Incrementar espaciado entre h4 y .h3Container */
+    align-items: flex-start; /* Alinear al inicio horizontalmente */
+    text-align: left; /* Alinear texto a la izquierda */
+    margin-top: 1.5rem; /* Bajar el contenedor completo */
+}
+
+.bloque1LeftSubtitle h4 {
+    margin: 0;
+    font-weight: 400; /* Peso más ligero */
+    font-size: 3.2rem; /* Tamaño del subtítulo */
+    line-height: 1.4; /* Espaciado entre líneas */
+    color: black; /* Color del texto */
+}
+
+.h3Container {
+    position: relative; /* Posicionar los elementos internamente */
+    display: flex; /* Flexbox para alinear la imagen y el texto */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.h3Container img {
+    position: absolute; /* Colocar la imagen a la izquierda */
+    left: 0; /* Pegar completamente a la izquierda */
+    width: 2.5rem; /* Tamaño de la imagen */
+    height: auto; /* Mantener proporciones */
+    margin-left: -1rem; /* Ajustar si es necesario que sobresalga */
+    bottom: -5.4rem;
+    
+    
+}
+.h3Container h3 {
+    position: absolute; /* Colocar el texto encima de la imagen */
+    top:-1rem;
+    
+    
+    margin: 0;
+    font-weight: 700; /* Negrita para el texto */
+    font-size: 5rem; /* Tamaño del texto */
+    line-height: 1;
+    color: black; /* Cambiar el color si la imagen lo requiere */
+    text-align: center;
 }

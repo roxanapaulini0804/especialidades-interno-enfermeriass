@@ -213,3 +213,13 @@
         display: flex; /* Muestra la versión desktop */
     }
 }
+
+/* Fondo con triángulo rojo para desktop */
+@media (min-width: 1000px) {
+    .bloque5 {
+        background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/triangulo-rojo-bloque5-desktop.png'); /* URL del triángulo rojo */
+        background-size: auto 125px; /* Ajustar el tamaño */
+        background-position: right bottom; /* Pegado al lado derecho inferior */
+        background-repeat: no-repeat; /* Evita que se repita la imagen */
+    }
+}

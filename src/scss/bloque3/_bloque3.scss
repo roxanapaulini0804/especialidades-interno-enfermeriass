@@ -9,44 +9,42 @@
   text-align: center;
 
   .bloque3-title {
-      margin-bottom: 5rem; 
-      text-align: center;
-  }
+    margin-bottom: 5rem; 
+    text-align: center;
+}
 
-  .bloque3-title h2 {
-      font-size: 5rem; /* Tamaño de fuente ajustable */
-      font-weight: 350; /* Negrita */
-      color: #000; /* Color del texto */
-      line-height: 1.2; /* Altura de línea */
-      text-align: center; /* Centrado */
-      margin: 5rem auto;
-      //max-width: 500; /* Ancho máximo del texto */
-      @include m.phone_375 {
+.bloque3-title h2 {
+    font-size: 5rem; /* Tamaño de fuente ajustable */
+    font-weight: 350; /* Fuente regular */
+    color: #000; /* Color del texto */
+    line-height: 1.2; /* Altura de línea */
+    text-align: center; /* Centrado */
+    margin: 5rem auto;
+
+    //max-width: 500; /* Ancho máximo del texto */
+    @include m.phone_375 {
         font-size: 3rem;
-      }
-      @include m.tablet_800 {
-        font-size: 3rem;
-        width: 50rem;
-        
-      }
-      @include m.desktop_1020 {
-        font-size: 3rem;
-        width: 50rem;
-        
-      
-       
     }
-  }
+    @include m.tablet_800 {
+        font-size: 3rem;
+        width: 50rem;
+    }
+    @include m.desktop_1020 {
+        font-size: 3rem;
+        width: 50rem;
+    }
+}
 
-  @media (max-width: 768px) {
-      .bloque3-title h2 {
-          font-size: 2rem; /* Tamaño más pequeño en móviles */
-          width:25rem ;
-      .bloque3-title span{
-          font-weight: 400;
-      }
-      }
-  }
+.bloque3-title span {
+    font-weight: bold; /* Negrita solo para el texto dentro del span */
+    color: inherit; /* Mantener el mismo color que el texto principal */
+}
+
+@media (max-width: 768px) {
+    .bloque3-title h2 {
+        font-size: 2rem; /* Tamaño más pequeño en móviles */
+        width: 25rem;
+    }
 }
   
   /* Contenedor general */
@@ -254,4 +252,4 @@
       display: grid; /* Muestra la grilla desktop en pantallas grandes */
     }
   }
-  
+}
