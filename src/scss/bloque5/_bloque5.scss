@@ -6,7 +6,7 @@
 .bloque5 {
     background-color: #000;
     color: #fff;
-    padding: 20px 20px;
+    padding: 40px 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -18,14 +18,15 @@
     display: flex; /* Visible solo en móvil */
     flex-direction: column;
     text-align: center; /* Centra el título y subtítulo */
-    max-width: 100%;
+    max-width:100%;
     margin-bottom: 20px;
+  
     
    
 }
 
 .bloque5Left.bloque5Mobile h2 {
-    font-size: 24px;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 10px;
     
@@ -35,6 +36,9 @@
     font-size: 16px;
     margin-bottom: 20px;
     line-height: 1.5;
+    
+    
+
 }
 
 /* Contenido Carrusel para móvil */
@@ -56,12 +60,14 @@
 }
 
 .carouselItem {
-    flex: 0 0 100%; /* Cada ítem ocupa todo el ancho */
+    flex: 0 0 100%; 
     text-align: center;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    background: #111;
+    padding: 15px;
+    border: 2px solid white !important;
+    border-radius: 25px;
+    background: black;
+    
+    
 }
 
 .carouselItem img {
@@ -78,7 +84,7 @@
 
 .carouselItem p {
     font-size: 14px;
-    color: #ccc;
+    color: white;
 }
 
 /* Controles del Carrusel */
@@ -129,17 +135,17 @@
     text-align: left;
     max-width: 400px;
     margin-right: 520px;
-    padding-top:150px;
+    padding-top:200px;
 }
 
 .bloque5Left.bloque5Desktop h2 {
-    font-size: 22px;
+    font-size: 30px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .bloque5Left.bloque5Desktop p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
     margin-bottom: 20px;
 }
@@ -153,17 +159,18 @@
     align-items: flex-start; /* Alinea los ítems a la izquierda */
     gap: 20px;
     margin-right: auto; /* Empuja el contenido hacia la derecha */
-    padding-left: 58rem;
+    padding-left:50rem;
     position: relative;
-    top: -180px; /* Mueve el elemento hacia arriba */
+    top: -250px; 
+    
 }
 
 .bloque5Content.bloque5Desktop .bloque5Item {
     display: flex;
     align-items: center;
     gap: 15px;
-    padding-bottom: 20px; /* Espaciado para las líneas */
-    border-bottom: 1px solid #ccc; /* Línea separadora */
+    padding-bottom: 20px; 
+    border-bottom: 1px solid #ccc; 
 }
 
 .bloque5Content.bloque5Desktop .bloque5Item img {
@@ -171,7 +178,7 @@
     height: 60px;
 }
 .bloque5Content.bloque5Desktop .bloque5Item:last-child {
-    border-bottom: none; /* Elimina la línea para el último ítem */
+    border-bottom: none; 
 }
 .bloque5Content.bloque5Desktop .bloque5Text {
     text-align: left;
@@ -202,7 +209,7 @@
     }
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 1000px) {
     .bloque5Left.bloque5Mobile,
     .bloque5Content.bloque5Mobile {
         display: none; /* Oculta la versión móvil en desktop */

@@ -7,9 +7,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 30vh; /* Altura del bloque */
-  position: relative; /* Necesario para posicionar las imágenes */
-  overflow: hidden; /* Evitar que las imágenes sobresalgan del contenedor */
+  min-height: 30vh; 
+  position: relative;
+  overflow: hidden; 
 }
 
 /* Contenedor dentro del bloque */
@@ -24,25 +24,34 @@
 
 /* Estilos del texto */
 .bloque2Container h2 {
-  color: #fff; /* Texto blanco */
+  color: #fff; 
   font-size: 1.5rem;
   line-height: 1.4;
   font-weight: 400;
-  z-index: 3; /* Asegura que el texto esté siempre visible */
+  z-index: 3; 
+  @include m.phone_460 {
+    font-size:1.8rem ;
+    
+}
+@include m.desktop_1000 {
+  font-size:2rem ;
+  width:55rem ;
+  
+}
 }
 
-/* Bloque celeste (arriba derecha en móviles) */
+
 img.bloqueCeleste {
-  position: absolute; /* Permite posicionarlo en cualquier lugar */
-  top: -100px; /* Ajustar la posición superior */
-  right: -20px; /* Alineado a la derecha */
+  position: absolute;
+  top: -100px; 
+  right: -20px; 
   width: 80px; /* Tamaño ajustado para móviles */
   height: auto; /* Mantener proporciones */
   display: none; /* Oculto por defecto */
   z-index: 1; /* Detrás del texto */
 }
 
-/* Bloque rojo (abajo derecha en móviles) */
+
 img.bloqueRojo {
   position: absolute; /* Permite posicionarlo en cualquier lugar */
   bottom: -100px; /* Ajustar la posición inferior */
