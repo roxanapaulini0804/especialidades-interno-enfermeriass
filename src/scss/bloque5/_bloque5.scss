@@ -88,6 +88,27 @@
 }
 
 /* Controles del Carrusel */
+.bloque5Left.bloque5Desktop .bloque5Title {
+    position: relative;
+    top: 100px; /* Baja todo el bloque 20px */
+}
+.bloque5Left.bloque5Desktop .bloque5Title h2 {
+    font-size: 3rem; /* Tamaño del título */
+    font-weight: bold; /* Texto en negrita */
+    line-height: 1.3; /* Altura de línea para mejorar la legibilidad */
+    margin: 0 0 10px 0; /* Margen inferior para separar del párrafo */
+    color: #fff; /* Asegura que el texto sea blanco */
+    
+}
+
+.bloque5Left.bloque5Desktop .bloque5Title p {
+    font-size:1.7rem; /* Tamaño del subtítulo */
+    line-height: 1.5; /* Altura de línea */
+    margin: 0; /* Elimina márgenes adicionales */
+    color: #ccc; /* Color gris claro para el subtítulo */
+    width: 20rem;
+
+}
 .carouselControls button {
     position: absolute;
     top: 50%;
@@ -129,40 +150,34 @@
 }
 
 /* Versión Desktop */
-.bloque5Left.bloque5Desktop {
-    display: none; /* Oculta en móvil */
-    flex: 1;
-    text-align: left;
-    max-width: 400px;
-    margin-right: 520px;
-    padding-top:200px;
-}
-
-.bloque5Left.bloque5Desktop h2 {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.bloque5Left.bloque5Desktop p {
-    font-size: 20px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
 .bloque5Content.bloque5Desktop {
-    display: none; /* Oculta en móvil */
-    flex: 1;
-    max-width: 900;
     display: flex;
-    flex-direction: column; /* Alineación vertical */
-    align-items: flex-start; /* Alinea los ítems a la izquierda */
-    gap: 20px;
-    margin-right: auto; /* Empuja el contenido hacia la derecha */
-    padding-left:50rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* Reduce el espacio vertical */
+    margin-right: auto;
+    padding-left: 40rem; /* Reduce el padding izquierdo */
     position: relative;
-    top: -250px; 
-    
+    top: -120px; /* Ajusta la posición vertical */
+    max-width: 800px; /* Reduce el ancho máximo */
+}
+
+.bloque5Content.bloque5Desktop .bloque5Item {
+    padding-bottom: 10px; /* Reduce el espaciado entre elementos */
+}
+
+.bloque5Content.bloque5Desktop .bloque5Item img {
+    width: 50px;
+    height: 50px; /* Ajusta el tamaño de las imágenes */
+}
+
+.bloque5Content.bloque5Desktop .bloque5Text h3 {
+    font-size: 16px; /* Ajusta el tamaño del título */
+}
+
+.bloque5Content.bloque5Desktop .bloque5Text p {
+    font-size: 12px; /* Ajusta el tamaño del párrafo */
+    line-height: 1.3; /* Ajusta el interlineado */
 }
 
 .bloque5Content.bloque5Desktop .bloque5Item {
@@ -195,6 +210,9 @@
     margin: 0;
     color: #ccc;
 }
+
+
+
 
 /* Media Queries */
 @media (max-width: 1019px) {

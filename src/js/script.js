@@ -152,19 +152,29 @@ indicators.forEach((indicator, index) => {
 updateCarousel(); // Inicializa el carrusel
 
 
-// JavaScript para manejar el desplazamiento del carrusel en móvil
-document.querySelector('.btn-nav-prev').addEventListener('click', function() {
-    document.querySelector('.carousel-movil').scrollBy({
-        left: -220, // Ajusta el valor según el tamaño de las tarjetas
-        behavior: 'smooth'
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+        },
     });
 });
-
-document.querySelector('.btn-nav-next').addEventListener('click', function() {
-    document.querySelector('.carousel-movil').scrollBy({
-        left: 220, // Ajusta el valor según el tamaño de las tarjetas
-        behavior: 'smooth'
-    });
-});
-
-

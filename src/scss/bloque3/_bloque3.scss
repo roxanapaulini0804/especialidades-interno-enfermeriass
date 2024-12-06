@@ -9,136 +9,108 @@
   text-align: center;
 
   .bloque3-title {
-    margin-bottom: 5rem; 
+    margin-bottom: 5rem;
     text-align: center;
-}
 
-.bloque3-title h2 {
-    font-size: 1.5rem;
-    font-weight: 350; 
-    color: #000; 
-    line-height: 1.2; 
-    text-align: center; 
-    margin: 5rem auto;
-    @include m.phone_400{
+    h2 {
       font-size: 1.8rem;
-      
+      font-weight: 350;
+      color: #000;
+      line-height: 1.2;
+      margin: 5rem auto;
+
+      @media (max-width: 500px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    span {
+      font-weight: bold;
+      color: inherit;
+    }
   }
-    @include m.phone_500{
-    font-size: 2rem;
-    width:35rem ;
-    
-}
-@include m.tablet_700{
-  font-size: 2.8rem;
-  width:50rem ;
-  
-}
-    
-   
-   
-   
-  
-  }
-    
-}
 
-.bloque3-title span {
-    font-weight: bold; /* Negrita solo para el texto dentro del span */
-    color: inherit; /* Mantener el mismo color que el texto principal */
-}
-
-
-  
   /* Contenedor general */
   .bloque3-container {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 1rem;
-    justify-content: center; 
-    padding: 0; 
-    margin: auto; 
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+    
   }
-  
+
   /* Carrusel móvil */
   .carousel-movil {
     display: flex;
-    gap: 2rem; /* Aumenta el espacio entre las tarjetas */
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 1rem; /* Añade espacio alrededor del carrusel */
-    padding-bottom: 5rem;
+    overflow: hidden;
+    padding: 0 1rem;
+    
 
-    .card-movil {
-        flex: 0 0 auto; /* Cards no se encogen ni se expanden */
-        width: 220px; /* Reduce el ancho de las tarjetas */
-        background-color: #000;
-        color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
+    .swiper-wrapper {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+        gap: -2rem; /* Espaciado entre tarjetas */
+    }
 
-        img {
-            width: 100%;
-            height: 150px; /* Reduce la altura de la imagen */
-            object-fit: cover;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-        }
+    .swiper-slide.card-movil {
+      flex: 0 0 auto;
+      width: 80%; /* Ancho flexible basado en el contenedor */
+      max-width: 250px; /* Máximo ancho para pantallas grandes */
+      height: 300px; /* Altura automática basada en el contenido */
+      margin: 0 10px;
+      background-color: #000; /* Fondo negro */
+      color: #fff; /* Texto blanco */
+      border-radius: 8px; /* Bordes redondeados */
+      overflow: hidden; /* Oculta el contenido desbordado */
+      text-align: left; /* Alineación del texto */
+      display: flex;
+      flex-direction: column;
+      
+    
+      img {
+        width: 100%; /* La imagen ocupa todo el ancho */
+        aspect-ratio: 16 / 9; /* Mantiene una proporción de 16:9 */
+        object-fit: cover; /* Asegura que la imagen no se deforme */
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
 
         .card-content-movil {
-            padding: 0.8rem; /* Reduce el padding interno */
+            padding: 2rem;
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
-            height: 180px;
+            gap: 4rem;
 
-            .text-container-movil {
-                display: flex;
-                flex-direction: column;
-                gap: 0.3rem;
-                padding-top: 0.5rem;
+            h4 {
+                font-size: 1.2rem;
+                font-weight: 400;
+                color: #00b5c4;
+                margin: 0;
+            }
 
-                h4 {
-                    font-size: 1.2rem; /* Reduce el tamaño del subtítulo */
-                    font-weight: 400;
-                    color: #00B5C4;
-                    margin: 0;
-                    text-align: left;
-                    line-height: 1.3;
-                }
-
-                h3 {
-                    font-size: 1.6rem; /* Reduce el tamaño del título */
-                    font-weight: bold;
-                    color: #fff;
-                    margin: 0;
-                    text-align: left;
-                    line-height: 1.2;
-                }
+            h3 {
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin: 0;
+                color: #fff;
             }
 
             a {
-                font-size: 1.5rem; /* Reduce el tamaño del enlace */
-                color: #fff;
+                font-size: 1.1rem;
                 margin-top: auto;
+                color: #fff;
                 text-align: center;
-                padding-top: 3.5rem;
             }
 
             button {
-                font-size: 1.5rem; /* Reduce el tamaño del botón */
+                font-size: 1rem;
                 padding: 0.5rem;
                 background-color: #ff0000;
-                color: black;
+                color: #fff;
                 border: none;
-                font-weight: bold;
-                border-radius: 8px;
+                border-radius: 5px;
                 cursor: pointer;
-                margin-top: 0.5rem; /* Reduce el margen superior */
-                width: 160px; /* Reduce el ancho del botón */
-                margin: 0 auto; /* Centra el botón */
-                display: block;
+                margin-top: 1rem;
                 transition: background-color 0.3s ease;
 
                 &:hover {
@@ -149,16 +121,28 @@
     }
 }
 
-  
+
+    .swiper-pagination {
+      bottom: 10px;
+      text-align: center;
+      padding-bottom:-0.6rem;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #000;
+    }
+  }
+
   /* Grilla desktop */
   .carousel-desktop {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    gap: 1rem; /* Espaciado entre los cards */
+    grid-template-columns: repeat(3, 1fr);
+    gap:2rem;
     justify-content: center;
     align-items: start;
-    padding: 2rem 5rem;
-  
+    padding: 1rem;
+
     .card-desktop {
       background-color: #000;
       color: #fff;
@@ -166,66 +150,53 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       overflow: hidden;
       width: 250px;
-      min-height: 400px;
-  
+      height: 350px;
+
       img {
         width: 100%;
         height: 180px;
         object-fit: cover;
       }
-  
+
       .card-content {
         padding: 1rem;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-  
-        .text-container {
-          display: flex;
-          flex-direction: column;
-          gap: 0.3rem;
-          padding-top:0.8rem;
-          
-  
-          h4 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: #00B5C4;
-            margin: 0;
-            text-align: left;
-            line-height: 1.5;
-          }
-  
-          h3 {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #fff;
-            margin: 0;
-            text-align: left;
-            line-height: 1.3;
-          }
-        }
-  
-        a {
+        gap: 0.3rem; /* Reduce el espacio entre los elementos */
+
+        h4 {
           font-size: 1.5rem;
-          color: #fff;
-          padding-top: 4.5rem;
+          font-weight: 400;
+          color: #00b5c4;
+          margin: 0;
+          text-align: left;
         }
-  
+
+        h3 {
+          font-size: 1.8rem;
+          font-weight: bold;
+          color: #fff;
+          margin: 0;
+          text-align: left;
+        }
+
+        a {
+          font-size: 1.2rem;
+          color: #fff;
+          padding-top: 1rem;
+        }
+
         button {
-          font-size: 2rem;
+          font-size: 1.2rem;
           padding: 0.5rem 1rem;
           background-color: #ff0000;
           color: #fff;
           border: none;
-          border-radius: 12px;
+          border-radius: 5px;
           cursor: pointer;
-          margin-top: auto;
-          width: 180px; /* Botón con ancho fijo */
-          margin: 0 auto; /* Centra el botón */
-         display: block; /* Asegura el centrado */
-         transition: background-color 0.3s ease;
-  
+          margin-top: 1rem;
+          transition: background-color 0.3s ease;
+
           &:hover {
             background-color: #cc0000;
           }
@@ -233,25 +204,24 @@
       }
     }
   }
-  
+
   /* Media queries */
-  @media (max-width: 1019px) {
-    .carousel-desktop {
-      display: none; /* Oculta la grilla desktop en pantallas pequeñas */
-    }
-  
-    .carousel-movil {
-      display: flex; /* Muestra el carrusel móvil en pantallas pequeñas */
-      
-    }
+@media (max-width: 1023px) {
+  .bloque3 .carousel-desktop {
+    display: none !important; /* Fuerza a ocultar en móviles */
   }
-  
-  @media (min-width: 1020px) {
-    .carousel-movil {
-      display: none; /* Oculta el carrusel móvil en pantallas grandes */
-    }
-  
-    .carousel-desktop {
-      display: grid; /* Muestra la grilla desktop en pantallas grandes */
-    }
+
+  .bloque3 .carousel-movil {
+    display: flex !important; /* Fuerza a mostrar en móviles */
   }
+}
+
+@media (min-width: 1024px) {
+  .bloque3 .carousel-movil {
+    display: none !important; /* Fuerza a ocultar en escritorio */
+  }
+
+  .bloque3 .carousel-desktop {
+    display: grid !important; /* Fuerza a mostrar en escritorio */
+  }
+}
