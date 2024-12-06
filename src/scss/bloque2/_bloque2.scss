@@ -33,11 +33,17 @@
     font-size:1.8rem ;
     
 }
-@include m.desktop_1000 {
+@include m.tablet_700 {
   font-size:2rem ;
-  width:55rem ;
+  width:45rem ;
   
 }
+@include m.desktop_1000 {
+  font-size:2.3rem ;
+  width:55rem ;
+}
+
+
 }
 
 
@@ -74,9 +80,9 @@ img.bloqueRojo {
 }
 
 
-@media (min-width: 900px) {
+@media (min-width: 719px) {
   .bloque2 {
-    background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/celeste-rojo-background-bloque2-desktop.png');
+    background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/background-bloque2-desktop.webp');
     background-size: contain; /* Ajusta el tamaño de la imagen */
     background-position: right center; /* Pegado al lado derecho */
     background-repeat: no-repeat; /* Evita que se repita la imagen */

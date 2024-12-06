@@ -4,30 +4,31 @@
 .bloque6 {
     background-color: #00bcd4; /* Fondo */
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    padding: 40px 20px; /* Espaciado interno */
-    text-align: center; /* Centrar texto */
+    justify-content: center; 
+    align-items: center; 
+    padding: 40px 20px; 
+    text-align: center;
 }
 
 .bloque6Container {
-    max-width: 600px; /* Ancho máximo del contenedor */
-    width: 100%; /* Ancho completo hasta el máximo */
-    padding: 20px; /* Espaciado interno */
+    max-width: 600px; 
+    width: 100%; 
+    padding: 20px; 
     
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 10px; 
     
 }
 
 .bloque6Titulo {
-    font-size: 24px; /* Tamaño del texto */
-    font-weight: bold; /* Negrita */
-    color: #ffffff; /* Color del texto */
-    margin: 0 0 20px; /* Espacio inferior */
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #ffffff; 
+    margin: 0 0 20px;
 }
 
 .bloque6Titulo span {
     font-weight: bold; /* Negrita adicional */
+    
 }
 
 .bloque6Boton {
@@ -39,7 +40,7 @@
     border-radius: 20px; /* Bordes redondeados */
     font-weight: bold;
     font-size: 16px; /* Tamaño del texto */
-    margin-top: 20px; /* Espacio superior */
+    margin-top: 5px; /* Espacio superior */
 }
 
 /* Ajustes para pantallas grandes */
@@ -51,6 +52,7 @@
 
     .bloque6Titulo {
         font-size: 28px; /* Texto más grande */
+        
     }
 
     .bloque6Boton {
@@ -66,7 +68,7 @@
     }
 
     .bloque6Titulo {
-        font-size: 22px; /* Texto más pequeño */
+        font-size: 23px; /* Texto más pequeño */
     }
 
     .bloque6Boton {
