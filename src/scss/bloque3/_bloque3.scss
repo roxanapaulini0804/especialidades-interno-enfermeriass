@@ -65,7 +65,7 @@
   .carousel-movil {
     display: flex;
     overflow: hidden;
-    padding: 0 1rem;
+    padding: 0 5rem;
     
 
     .swiper-wrapper {
@@ -79,7 +79,7 @@
       width: 80%; /* Ancho flexible basado en el contenedor */
       max-width: 250px; /* Máximo ancho para pantallas grandes */
       height: 320px; /* Altura automática basada en el contenido */
-      margin: 0 10px;
+      margin: 0px 20px;
       background-color: #000; /* Fondo negro */
       color: #fff; /* Texto blanco */
       border-radius: 8px; /* Bordes redondeados */
@@ -127,6 +127,7 @@
                 display: flex;
                 flex-direction: column; 
                 align-items: center; 
+                font-family: "Poppins", sans-serif;
             }
 
             button {
@@ -142,8 +143,9 @@
                 justify-content: center;
                 display: flex;
                 flex-direction: column; 
-                margin-left:3rem;
+                margin-left:2.4rem;
                 transition: background-color 0.3s ease;
+               
 
                 &:hover {
                     background-color: #cc0000;
@@ -155,7 +157,7 @@
 
 
     .swiper-pagination {
-      bottom: 20px;
+      bottom: 10px;
       text-align: center;
       padding-top:-5rem;
       color: #fff;
@@ -163,7 +165,8 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-      color: #00B5C4;
+      color: black;
+     
     }
   }
 

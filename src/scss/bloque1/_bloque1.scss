@@ -405,3 +405,53 @@
         height: 4rem;
     }
 }
+
+
+.bloque1LeftSubtitle1 {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+    position: relative;
+    top: 2rem; // Ajusta según necesites
+
+    img {
+        position: absolute;
+        width: 2.5rem;
+        height: auto;
+        left: -0.9rem;
+        z-index: 2;
+        top: -0.7rem;
+        @include m.desktop_1020 {
+            width: 3.4rem;
+            top: -2rem;
+            left: -1rem;
+        }
+        @include m.desktop_1200 {
+            top: -0.8rem;
+        }
+    }
+    h3, h4 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 1.8rem;
+        position: relative;
+        z-index: 5;
+        @include m.desktop_1020 {
+            font-size: 2rem;
+        }
+        @include m.desktop_1200 {
+            font-size: 2.3rem;
+        }
+    }
+    h4 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        @include m.desktop_1020 {
+            font-size: 2rem;
+        }
+        @include m.desktop_1200 {
+            font-size: 3.2rem;
+        }
+    }
+}

@@ -34,7 +34,7 @@ html(lang="es")
                 .bloque1Background
                     //- https://lp.cayetano.edu.pe/wp-content/uploads/2024/10/beca18_logo-scaled.webp
                     //- img(src="img/beca18evento-logo.webp", alt="")
-                    img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/10/beca18_logo-scaled.webp", alt="")
+                    img(src="", alt="")
                     .bloque1LeftSubtitle
                         
                         h4  
@@ -45,8 +45,12 @@ html(lang="es")
                             | Profesionales en
                                 
                         .h3Container
-                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/esp_logo2_top.webp", alt="Logo")
+                           
                             h3 Enfermería
+                    .bloque1LeftSubtitle1
+                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/09/esp_logo2_top.webp", alt="")
+                        h3 Preventa válida hasta:
+                        h4 20 de marzo
                 .bloque1FormContent
                     //- img.bloque1FormContentMobile1(src="img/shield-mobile-1.webp", alt="")
                     //- img.bloque1FormContentMobile2(src="img/shield-mobile-2.webp", alt="")
@@ -97,7 +101,8 @@ html(lang="es")
                                         h4 Segunda Especialidad en 
                                         h3 Centro Quirúrgico Especializado
                                         a(href="#") Ver programa →
-                                        button Quiero inscribirme
+                                        button(onclick="scrollToForm()") Quiero inscribirme
+
                                                         
                             .swiper-slide.card-movil
                                 img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/neonatales.webp", alt="Cuidados Intensivos Neonatales")
@@ -106,7 +111,7 @@ html(lang="es")
                                         h4 Segunda Especialidad en 
                                         h3 Cuidados Intensivos Neonatales
                                         a(href="#") Ver programa →
-                                        button Quiero inscribirme
+                                        button(onclick="scrollToForm()") Quiero inscribirme
 
                             .swiper-slide.card-movil
                                 img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/movilcards.webp", alt="Emergencias y Desastres")
@@ -118,7 +123,7 @@ html(lang="es")
                                             br
                                             | Nefrológicos
                                         a(href="#") Ver programa →
-                                        button Quiero inscribirme
+                                        button(onclick="scrollToForm()") Quiero inscribirme
 
                             .swiper-slide.card-movil
                                 img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/emergencia-y-desastres.webp", alt="Cuidados Nefrológicos")
@@ -127,7 +132,7 @@ html(lang="es")
                                         h4 Segunda Especialidad en 
                                         h3 Emergencias y Desastres
                                         a(href="#") Ver programa →
-                                        button Quiero inscribirme
+                                        button(onclick="scrollToForm()") Quiero inscribirme
 
                             
                         .swiper-pagination
@@ -143,7 +148,7 @@ html(lang="es")
                                     h4 Segunda Especialidad en
                                     h3 Centro Quirúrgico Especializado
                                     a(href="#") Ver programa →
-                                    button Quiero inscribirme
+                                    button(onclick="scrollToForm()") Quiero inscribirme
                               
                             .card-desktop
                                 img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/item1.webp", alt="Cuidados Intensivos Neonatales")
@@ -152,7 +157,7 @@ html(lang="es")
                                     h4 Segunda Especialidad en
                                     h3 Cuidados Intensivos Neonatales
                                     a(href="#") Ver programa →
-                                    button Quiero inscribirme
+                                    button(onclick="scrollToForm()") Quiero inscribirme
                                 
                             .card-desktop
                                 img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/cards-desktop.webp", alt="Emergencias y Desastres")
@@ -161,7 +166,7 @@ html(lang="es")
                                     h4 Segunda Especialidad en
                                     h3 Cuidados Nefrológicos
                                     a(href="#") Ver programa →
-                                    button Quiero inscribirme
+                                    button(onclick="scrollToForm()") Quiero inscribirme
                             .card-desktop
                                 img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/item3.webp", alt="Cuidados Nefrológicos")
                                 .card-content
@@ -169,7 +174,7 @@ html(lang="es")
                                     h4 Segunda Especialidad en
                                     h3 Emergencias y Desastres
                                     a(href="#") Ver programa →
-                                    button Quiero inscribirme
+                                    button(onclick="scrollToForm()") Quiero inscribirme
 
         .bloque5
             .bloque5Container
@@ -240,7 +245,7 @@ html(lang="es")
                 h2.bloque6Titulo ¡Alcanza el éxito profesional con
                     br
                     span La excelencia de Cayetano!
-                a.bloque6Boton(href="#") Regístrate
+                a.bloque6Boton(href="javascript:void(0)" onclick="scrollToForm()") Regístrate
     
 
 
