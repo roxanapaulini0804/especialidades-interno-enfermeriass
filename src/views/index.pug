@@ -30,8 +30,10 @@ html(lang="es")
          
 
         .bloque1
+           
             .bloque1Container
                 .bloque1Background
+                    img.logoMobile(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/logo-1.webp", alt="Logo Universidad Peruana Cayetano Heredia")
                     //- https://lp.cayetano.edu.pe/wp-content/uploads/2024/10/beca18_logo-scaled.webp
                     //- img(src="img/beca18evento-logo.webp", alt="")
                     img(src="", alt="")
@@ -57,28 +59,67 @@ html(lang="es")
                     img.bloque1FormContentMobile1(src=" ", alt="")
                     img.bloque1FormContentMobile2(src="", alt="")
                     //- h4 ¡Cerramos Inscripciones!
+                    //- .bloque1Form
+                    //-     .bloque1FormTitle
+                    //-         h3 Especialízate en
+                    //-             span  tu profesión
+                    //-         p Déjanos tus datos para brindarte una atención personalizada.
+                           
+                    //-     input(type="text" placeholder="Nombres*")
+                    //-     input(type="text" placeholder="Apellidos*")
+                    //-     input(type="text" placeholder="Correo*")
+                    //-     input.inputNumber(type="number" placeholder="Tipo de doc.*" inputmode="numeric")
+                        
+                    //-     input(type="text" placeholder="N.° de WhatsApp*")
+                    //-     input(type="text" placeholder="Selecciona tu especialidad*")
+                       
+                    //-     .bloque1TopFormContainer--terminos
+                    //-         input(type="checkbox", name="")
+                    //-         h3 Política de privacidad y términos de servicio.
+                    //-     .captcha
+                    //-         #recap3503766000237491098.g-recaptcha(data-sitekey='6LdqkDoiAAAAALdLtgIzFUQelkS9jGZU4W7gjLHG' data-theme='light' data-callback='rccallback3503766000237491098' captcha-verified='false')
+                    //-         #recapErr3503766000237491098(style='font-size:12px;color:red;visibility:hidden;') Error en validación de Captcha. Si no es un robot, inténtelo de nuevo.
+                    //-     .bloque1FormButton
+                    //-         button
+                    //-             h3 Quiero más información
                     .bloque1Form
+                        img.logoForm(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/logo-1.webp", alt="Logo Universidad Peruana Cayetano Heredia")
                         .bloque1FormTitle
                             h3 Especialízate en
-                                span  tu profesión
-                           
-                        input(type="text" placeholder="Nombres*")
-                        input(type="text" placeholder="Apellidos*")
-                        input(type="text" placeholder="Correo*")
-                        input.inputNumber(type="number" placeholder="Tipo de doc.*" inputmode="numeric")
+                                span tu profesión
+                            p Déjanos tus datos para brindarte una atención personalizada.
                         
-                        input(type="text" placeholder="N.° de WhatsApp*")
+                        // Contenedor para Nombres y Apellidos
+                        .bloque1FormRow
+                            .bloque1FormColumn
+                                input(type="text" placeholder="Nombres*")
+                            .bloque1FormColumn
+                                input(type="text" placeholder="Apellidos*")
+                        
+                        input(type="text" placeholder="Correo*")
+                        input.inputNumber(type="number" placeholder="N.º de WhatsApp*" inputmode="numeric")
+                        
+                        // Contenedor para Tipo de Documento y Número de Documento
+                        .bloque1FormRow
+                            .bloque1FormColumn
+                                input(type="text" placeholder="Tipo de doc.*")
+                            .bloque1FormColumn
+                                input(type="text" placeholder="N.º de documento*")
+                        
                         input(type="text" placeholder="Selecciona tu especialidad*")
-                       
+                        
                         .bloque1TopFormContainer--terminos
                             input(type="checkbox", name="")
                             h3 Política de privacidad y términos de servicio.
+                        
                         .captcha
                             #recap3503766000237491098.g-recaptcha(data-sitekey='6LdqkDoiAAAAALdLtgIzFUQelkS9jGZU4W7gjLHG' data-theme='light' data-callback='rccallback3503766000237491098' captcha-verified='false')
                             #recapErr3503766000237491098(style='font-size:12px;color:red;visibility:hidden;') Error en validación de Captcha. Si no es un robot, inténtelo de nuevo.
+                        
                         .bloque1FormButton
                             button
-                                h3 Quiero más información
+                                h3 Enviar
+
         .bloque2
             .bloque2Container
                 img.bloqueCeleste(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/bloque-celeste-movil-bloque2.png", alt="Bloque celeste")
@@ -198,7 +239,6 @@ html(lang="es")
                           | tus habilidades y convertirte en un
                           br 
                           | referente en el cuidado de la salud.
-
                 // Contenido para desktop
                 .bloque5Content.bloque5Desktop
                     .bloque5Item
@@ -219,27 +259,30 @@ html(lang="es")
                 
                 .bloque5Content.bloque5Mobile
                     .carousel
-                        .carouselInner
-                            .carouselItem
-                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/62-anos-de-excelencia-1.webp", alt="62 años de excelencia")
-                                h3 +62 años de excelencia académica.
-                                p Aprende de docentes destacados y activos en el sector.
-                            .carouselItem
-                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/pasantias-nacionales-1.webp", alt="Pasantías")
-                                h3 Pasantías nacionales e internacionales
-                                p Obtén más experiencia en tu campo.
-                            .carouselItem
-                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/horarios-flexibles-1.webp", alt="Horarios flexibles")
-                                h3 Horarios flexibles
-                                p Clases virtuales los jueves y clases presenciales una vez al mes.
-                        .carouselControls
-                            button.carouselPrev ←
-                            button.carouselNext →
-                        //- .carouselIndicators
-                        //-     button(data-index="0") ●
-                        //-     button(data-index="1") ●
-                        //-     button(data-index="2") ●
-
+                        .carousel-track-container
+                            ul.carousel-track
+                                li.carousel-slide
+                                    .sliderItemInfo2
+                                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/62-anos-de-excelencia-1.webp" alt="62 años de excelencia")
+                                        h3 +62 años de excelencia académica.
+                                        p Aprende de docentes destacados y activos en el sector.
+                                li.carousel-slide
+                                    .sliderItemInfo2
+                                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/pasantias-nacionales-1.webp" alt="Pasantías")
+                                        h3 Pasantías nacionales e internacionales
+                                        p Obtén más experiencia en tu campo.
+                                li.carousel-slide
+                                    .sliderItemInfo2
+                                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/horarios-flexibles-1.webp" alt="Horarios flexibles")
+                                        h3 Horarios flexibles
+                                        p Clases virtuales los jueves y clases presenciales una vez al mes.
+                                
+                        button.carousel-button.carousel-button-left 
+                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/flecha2.png" alt="Flecha izquierda")
+                        button.carousel-button.carousel-button-right 
+                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/flecha1.png" alt="Flecha derecha")                 
+                    
+                    
         .bloque6
             .bloque6Container
                 h2.bloque6Titulo ¡Alcanza el éxito profesional con
