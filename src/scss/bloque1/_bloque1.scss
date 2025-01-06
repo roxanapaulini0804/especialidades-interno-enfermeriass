@@ -120,8 +120,12 @@
         width: 45rem;
     }
     @include m.desktop_1400 {
+<<<<<<< HEAD
         padding: 5rem;
         width: 45rem;
+=======
+        width: 40rem;
+>>>>>>> 373c7b1acc5de1cdbf9b68fcbbe9383d7097d23c
     }
 
     input[type="number"]::-webkit-inner-spin-button, 
@@ -147,6 +151,7 @@
 }
 
 .bloque1FormTitle {
+<<<<<<< HEAD
     display: flex; // Usamos flexbox para centrar
     flex-direction: column; // Aseguramos que el contenido esté en columna
     align-items: center; // Centra horizontalmente
@@ -154,10 +159,13 @@
     text-align: center; // Centra el texto
     width: 100%; // Aseguramos que ocupe todo el ancho disponible
 
+=======
+>>>>>>> 373c7b1acc5de1cdbf9b68fcbbe9383d7097d23c
     h3 {
         margin: 0;
         color: black;
         font-weight: 500;
+<<<<<<< HEAD
         font-size: 2.5rem;
         width: 20rem;
         margin-bottom: 1rem; // Espaciado inferior con el subtítulo
@@ -174,6 +182,33 @@
     }
 }
 
+=======
+        font-size: 2rem;
+        width:15rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      
+        @include m.phone_375 {
+            font-size: 2.3rem;
+            width:18rem;
+        }
+        @include m.desktop_1400 {
+            width: 18rem;
+        }
+        span {
+            font-weight: 800;
+        }
+    }    
+}
+    p{
+        margin: 0;
+        color: black;
+        font-weight: 500;
+        font-size: 2rem;
+       
+        text-align: center;
+    }
+>>>>>>> 373c7b1acc5de1cdbf9b68fcbbe9383d7097d23c
 .bloque1TopFormContainer--terminos {
     display: flex;
     column-gap: .5rem;
@@ -225,7 +260,7 @@
 
 /* Logo general (desktop y mobile) */
 .logoForm {
-    width: 120px;
+    width: 230px;
     height: auto;
     margin: 0 auto 1rem;
     display: block;
@@ -233,8 +268,8 @@
 
 /* Logo para móvil */
 .logoMobile {
-    display: none; // Oculto por defecto
-    width: 100px; // Ajustar tamaño para móvil
+    display: none; 
+    width: 100px; 
     height: auto;
     margin: 0 auto 1rem;
 }
@@ -242,23 +277,24 @@
 /* Media query para móvil */
 @media (max-width: 768px) {
     .logoForm {
-        display: none; // Ocultar el logo en el formulario en móvil
+        display: none; 
     }
 
     .logoMobile {
-        display: block; // Mostrar el logo en móvil
+        display: block; 
     }
 }
 .bloque1FormRow {
     display: flex;
-    gap: 1rem; // Espacio entre columnas
+    gap: 1rem; 
 }
 
 .bloque1FormColumn {
-    flex: 1; // Asegura que ambas columnas ocupen el mismo espacio
+    flex: 1; 
 }
 
 input {
+<<<<<<< HEAD
     width: 100%; // Asegura que los campos ocupen todo el ancho disponible
     padding: 2rem 0.5rem; // Incrementa el padding vertical para mayor altura
     height: 3rem; // Define una altura fija para los inputs
@@ -280,6 +316,23 @@ input {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+=======
+    width: 100%; 
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+// .bloque1FormButton button {
+//     width: 100%;
+//     background-color: #000;
+//     color: #fff;
+//     padding: 0.75rem;
+//     border: none;
+//     border-radius: 4px;
+//     cursor: pointer;
+// }
+>>>>>>> 373c7b1acc5de1cdbf9b68fcbbe9383d7097d23c
 
 .bloque2Button button:hover {
     background-color: #cc0000; /* Rojo más oscuro al pasar el mouse */
