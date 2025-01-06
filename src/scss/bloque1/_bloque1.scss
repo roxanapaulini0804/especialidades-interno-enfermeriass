@@ -84,60 +84,7 @@
     }
 }
 
-.bloque1BackgroundText {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    @include m.phone_360 {
-        row-gap: 2rem;
-    }
-    h2, h3, h4 {
-        margin: 0;
-        color: black;
-        font-weight: 600;
-        font-size: 4rem;
-    }
-    h1 {
-        width: 25rem;
-        font-size: 9rem;
-        font-weight: 500;
-        font-size:3.5rem;
-        @include m.phone_360 {
-            font-size:3.5rem;
-            width: 25rem;
-        }
-        @include m.phone_420 {
-            font-size: 2.2rem;
-            width: 30rem;
-        }
-        @include m.desktop_1200 {
-            font-size: 2.5rem;
-            width: 35rem;
-        }
-        @include m.desktop_1400 {
-            width: 40rem;
-            font-size: 3rem;
-        }
-        span {
-            font-weight: 700;
-        }
-    }
-   
-        // text-align: ;
-        // @include m.phone_360 {
-        //     font-size: 5rem;
-        // }
-        // @include m.phone_420 {
-        //     font-size: 6rem;
-        // }
-        // @include m.desktop_1200 {
-        //     font-size: 6.5rem;
-        // }
-        // @include m.desktop_1400 {
-        //     font-size: 8rem;
-        // }
-    }
-   
+
 
 .bloque1FormContent {
    
@@ -147,51 +94,9 @@
    
     justify-content: center;
     position: relative;
-    // overflow: hidden;
-    h4 {
-        display: none;
-        @include m.desktop_1020 {
-            display: block;
-            color: white;
-            width: 20rem;
-            background-color: black;
-            font-size: 3.5rem;
-            text-align: center;
-            padding: 5rem;
-            border-radius: 1.5rem;
-        }
-    }
+    
+    
 }
-//     .bloque1FormContentMobile1,
-//     .bloque1FormContentMobile2 {
-//         position: absolute;
-//         z-index: 1;
-        
-//         @include m.desktop_1020 {
-//             display: none;
-//         }
-//     }
-//     // .bloque1FormContentMobile1 {
-//     //     top: 0;
-//     //     right: 0;
-//     // }
-//     .bloque1FormContentMobile2 {
-//         bottom: -8rem;
-//         left: 0;
-//         display: none;
-//         @include m.phone_390 {
-//             bottom: -10rem;
-//         }
-//     }
-//     @include m.tablet_768 {
-//         padding: 8rem;
-//     }
-//     @include m.desktop_1020 {
-//         padding: 0;
-//         background-color: transparent;
-//         align-items: center;
-//     }
-// }
 
 .bloque1Form {
     background-color: white;
@@ -211,10 +116,12 @@
         width: 32rem;
     }
     @include m.desktop_1020 {
-        padding: 3rem;
+        padding: 5rem;
+        width: 45rem;
     }
     @include m.desktop_1400 {
-        width: 30rem;
+        padding: 5rem;
+        width: 45rem;
     }
 
     input[type="number"]::-webkit-inner-spin-button, 
@@ -239,76 +146,82 @@
     }
 }
 
-// .bloque1FormTitle {
-//     h3 {
-//         margin: 0;
-//         color: black;
-//         font-weight: 500;
-//         font-size: 2rem;
-//         width: rem;
-//         text-align: center;
-//         margin-bottom: 1rem;
-//         @include m.phone_375 {
-//             font-size: 2.3rem;
-//             width: 18rem;
-//         }
-//         @include m.desktop_1400 {
-//             width: 20rem;
-//         }
-//         span {
-//             font-weight: 800;
-//         }
-//     }    
-// }
+.bloque1FormTitle {
+    display: flex; // Usamos flexbox para centrar
+    flex-direction: column; // Aseguramos que el contenido esté en columna
+    align-items: center; // Centra horizontalmente
+    justify-content: center; // Centra verticalmente si es necesario
+    text-align: center; // Centra el texto
+    width: 100%; // Aseguramos que ocupe todo el ancho disponible
 
-// .bloque1TopFormContainer--terminos {
-//     display: flex;
-//     column-gap: .5rem;
-//     justify-content: flex-start;
-//     width: 100%;
-//     @include m.desktop_1020 {
-//         column-gap: .8rem;
-//     }
-//     input {
-//         width: 1rem;
-//         @include m.desktop_1020 {
-//             width: 1.5rem;
-//         }
-//     }
-//     h3 {
-//         font-size: 1rem;
-//         margin: 0;
-//         font-weight: 500;
-//         display: flex;
-//         align-items: center;
-//         @include m.desktop_1020 {
+    h3 {
+        margin: 0;
+        color: black;
+        font-weight: 500;
+        font-size: 2.5rem;
+        width: 20rem;
+        margin-bottom: 1rem; // Espaciado inferior con el subtítulo
+        span {
+            font-weight: 800; // Destacamos "tu profesión"
+        }
+    }
+
+    p {
+        margin: 0;
+        color: black;
+        font-size: 1.5rem;
+        margin-top: 0.5rem; // Espaciado superior para el subtítulo
+    }
+}
+
+.bloque1TopFormContainer--terminos {
+    display: flex;
+    column-gap: .5rem;
+    justify-content: flex-start;
+    width: 100%;
+    @include m.desktop_1020 {
+        column-gap: .8rem;
+    }
+    input {
+        width: 1rem;
+        @include m.desktop_1020 {
+            width: 1.5rem;
+        }
+    }
+    h3 {
+        font-size: 1rem;
+        margin: 0;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        @include m.desktop_1020 {
             
-//             font-size: 1.2rem;
-//         }
-//         @include m.desktop_1200 {
-//             font-size: 1.4rem;
-//         }
-//     }
-// }
+            font-size: 1.2rem;
+        }
+        @include m.desktop_1200 {
+            font-size: 1.4rem;
+        }
+    }
+}
 
-// .bloque1FormButton { 
-//     button {
-//         width: auto;
-//         height: auto;
-//         background-color: black;
-//         border-radius: 1rem;
-//         border: 1px solid black;
-//         h3 {
-//             padding: .5rem 1.5rem;
-//             margin: 0;
-//             color: white;
-//             font-size: 1.2rem;
-//             @include m.desktop_1020 {
-//                 font-size: 1.7rem;
-//             }
-//         }
-//     }
-// }
+.bloque1FormButton { 
+    button {
+        width: auto;
+        height: auto;
+        background-color: black;
+        border-radius: 1rem;
+        border: 1px solid black;
+        h3 {
+            padding: .5rem 1.5rem;
+            margin: 0;
+            color: white;
+            font-size: 1.2rem;
+            @include m.desktop_1020 {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
 
 /* Logo general (desktop y mobile) */
 .logoForm {
@@ -347,20 +260,31 @@
 
 input {
     width: 100%; // Asegura que los campos ocupen todo el ancho disponible
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 2rem 0.5rem; // Incrementa el padding vertical para mayor altura
+    height: 3rem; // Define una altura fija para los inputs
+    // border: 8px solid #ccc; // Bordes de los inputs
+    border-radius: 20px; // Bordes redondeados
+    font-size: 1rem; // Ajusta el tamaño del texto en los inputs
+    box-sizing: border-box; // Asegura que padding y border no desborden el contenedor
 }
 
 .bloque1FormButton button {
     width: 100%;
-    background-color: #000;
+    padding: 1rem;
+    background-color: bla; /* Color rojo */
     color: #fff;
-    padding: 0.75rem;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.bloque2Button button:hover {
+    background-color: #cc0000; /* Rojo más oscuro al pasar el mouse */
+}
+
 
 .captcha {
     height: 4.7rem !important;
