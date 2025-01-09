@@ -117,11 +117,11 @@
     }
     @include m.desktop_1020 {
         padding: 5rem;
-        width: 45rem;
+        width: 40rem;
     }
     @include m.desktop_1400 {
         padding: 5rem;
-        width: 45rem;
+        width: 40rem;
     }
 
     input[type="number"]::-webkit-inner-spin-button, 
@@ -131,14 +131,15 @@
     input, select {
         height: 2.5rem;
         width: 100%;
-        border-radius: .5rem;
+        border-radius: .7rem;
         border: none;
         border: 1px solid black;
         padding-left: .5rem;
         outline: none;
         @include m.desktop_1020 {
-            height: 2.8rem;
+            height: 2rem;
             font-size: 1.5rem;
+            
         }
         // @include m.desktop_1200 {
         //     height: 3.8rem;
@@ -223,30 +224,30 @@
     }
 }
 
-/* Logo general (desktop y mobile) */
 .logoForm {
-    width: 230px;
+    display: block; /* Mostrar por defecto en escritorio */
+    width: 230px; /* Tamaño para escritorio */
     height: auto;
-    margin: 0 auto 1rem;
-    display: block;
+    margin: 0 auto 1rem; /* Centramos el logo de escritorio */
 }
 
 /* Logo para móvil */
 .logoMobile {
-    display: none; 
-    width: 100px; 
+    display: none; /* Ocultar por defecto en todas las pantallas */
+    width: 100px; /* Tamaño para móviles */
     height: auto;
-    margin: 0 auto 1rem;
+    margin: 0; /* Sin márgenes adicionales */
 }
 
-/* Media query para móvil */
-@media (max-width: 768px) {
-    .logoForm {
-        display: none; 
+
+/* Mostrar el logo solo en dispositivos móviles */
+@media (max-width: 1000px) {
+    .logoMobile {
+        display: block; /* Haz que el logo sea visible en móviles */
     }
 
-    .logoMobile {
-        display: block; 
+    .logoForm { 
+        display: none; /* Oculta el logo de escritorio en móviles */
     }
 }
 .bloque1FormRow {
@@ -254,12 +255,12 @@
     gap: 1rem; 
 }
 
-.bloque1FormColumn {
+.u {
     flex: 1; 
 }
 
 input {
-    width: 100%; // Asegura que los campos ocupen todo el ancho disponible
+   
     padding: 2rem 0.5rem; // Incrementa el padding vertical para mayor altura
     height: 3rem; // Define una altura fija para los inputs
     
