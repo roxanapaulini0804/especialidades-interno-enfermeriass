@@ -1,50 +1,17 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector(".carousel-track");
-    const slides = Array.from(track.children);
-    const nextButton = document.querySelector(".carousel-button-right");
-    const prevButton = document.querySelector(".carousel-button-left");
-
-    // Calcula el ancho de un slide
-    const slideWidth = slides[0].getBoundingClientRect().width;
-
-    // Coloca cada slide en su posición correcta
-    slides.forEach((slide, index) => {
-        slide.style.left = `${slideWidth * index}px`;
-    });
-
-    let currentSlide = 0;
-
-    const moveToSlide = (index) => {
-        track.style.transform = `translateX(-${slideWidth * index}px)`;
-        currentSlide = index;
-    };
-
-    nextButton.addEventListener("click", () => {
-        if (currentSlide < slides.length - 1) {
-            moveToSlide(currentSlide + 1);
-        }
-    });
-
-    prevButton.addEventListener("click", () => {
-        if (currentSlide > 0) {
-            moveToSlide(currentSlide - 1);
-        }
-    });
-});
-
-
-// Inicialización de Swiper para bloque3
-document.addEventListener("DOMContentLoaded", () => {
-    const swiperBloque3 = new Swiper(".swiper", {
+    // Inicialización de Swiper
+    const swiperBloque3 = new Swiper(".swiper-bloque3", {
         slidesPerView: 1,
         spaceBetween: 20,
         pagination: {
-            el: ".swiper-pagination",
+            el: ".swiper-pagination-bloque3",
             clickable: true,
         },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next-bloque3",
+            prevEl: ".swiper-button-prev-bloque3",
         },
         breakpoints: {
             768: {
@@ -57,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         },
     });
-});
+
+
 
 // Scroll hacia el formulario
 function scrollToForm() {
@@ -70,3 +38,32 @@ function scrollToForm() {
     }
 }
 
+
+    // Inicialización de Swiper para bloque 5
+    const bloque5Element = document.querySelector(".swiper-bloque5");
+    
+        const swiperBloque5 = new Swiper(".swiper-bloque5", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination-bloque5",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next-bloque5",
+                prevEl: ".swiper-button-prev-bloque5",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+            },
+        });
+   
+
+});

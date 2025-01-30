@@ -133,7 +133,7 @@ html(lang="es")
 
                 .bloque3-container
                     // Carrusel móvil
-                    .carousel-movil.swiper
+                    .carousel-movil.swiper-bloque3
                         .swiper-wrapper
                             .swiper-slide.card-movil
                                 img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/cirugia-especializada.webp", alt="Centro Quirúrgico Especializado")
@@ -176,9 +176,9 @@ html(lang="es")
                                         button(onclick="scrollToForm()") Quiero inscribirme
 
                             
-                        .swiper-pagination
-                        .swiper-button-prev
-                        .swiper-button-next       
+                        .swiper-pagination.swiper-pagination-bloque3
+                        .swiper-button-prev.swiper-button-prev-bloque3
+                        .swiper-button-next.swiper-button-next-bloque3       
                             
                     // Grilla desktop
                     .carousel-desktop
@@ -257,30 +257,30 @@ html(lang="es")
                             h3 Horarios flexibles
                             p Clases virtuales los jueves y clases presenciales una vez al mes.
                 
-                .bloque5Content.bloque5Mobile
-                    .carousel
-                        .carousel-track-container
-                            ul.carousel-track
-                                li.carousel-slide
-                                    .sliderItemInfo2
-                                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/62-anos-de-excelencia-1.webp" alt="62 años de excelencia")
-                                        h3 +62 años de excelencia académica.
-                                        p Aprende de docentes destacados y activos en el sector.
-                                li.carousel-slide
-                                    .sliderItemInfo2
-                                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/pasantias-nacionales-1.webp" alt="Pasantías")
-                                        h3 Pasantías nacionales e internacionales
-                                        p Obtén más experiencia en tu campo.
-                                li.carousel-slide
-                                    .sliderItemInfo2
-                                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/horarios-flexibles-1.webp" alt="Horarios flexibles")
-                                        h3 Horarios flexibles
-                                        p Clases virtuales los jueves y clases presenciales una vez al mes.
+                .bloque5Content.bloque5Mobile.swiper-bloque5
+                    .swiper-wrapper
+                        .swiper-slide
+                            .sliderItemInfo2
+                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/62-anos-de-excelencia-1.webp", alt="62 años de excelencia")
+                                h3 +62 años de excelencia académica.
+                                p Aprende de docentes destacados y activos en el sector.
+                        .swiper-slide
+                            .sliderItemInfo2
+                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/pasantias-nacionales-1.webp", alt="Pasantías")
+                                h3 Pasantías nacionales e internacionales
+                                p Accede a experiencias en instituciones de prestigio que transformarán tu visión.  
+                        .swiper-slide
+                            .sliderItemInfo2
+                                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/horarios-flexibles-1.webp", alt="Horarios flexibles")
+                                h3 Horarios flexibles
+                                p Clases virtuales los jueves y clases presenciales una vez al mes.
+                                 
+                .swiper-pagination-bloque5
                                 
-                        button.carousel-button.carousel-button-left 
-                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/flecha2.png" alt="Flecha izquierda")
-                        button.carousel-button.carousel-button-right 
-                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/flecha1.png" alt="Flecha derecha")                 
+                        //- button.carousel-button.carousel-button-left 
+                        //-     img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/flecha2.png" alt="Flecha izquierda")
+                        //- button.carousel-button.carousel-button-right 
+                        //-     img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/12/flecha1.png" alt="Flecha derecha")                 
                     
                     
         .bloque6
