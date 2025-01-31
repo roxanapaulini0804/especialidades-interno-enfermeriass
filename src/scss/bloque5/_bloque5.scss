@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: flex-start;
     position: relative; /* Asegura que todos los elementos se posicionen correctamente */
-    min-height: 450px; /* Ajusta la altura mínima del contenedor */
+    min-height: 500px; /* Ajusta la altura mínima del contenedor */
 }
 
 
@@ -120,10 +120,10 @@
 }
 
 
-/* Estilo base para la paginación */
-.swiper-pagination.swiper-pagination-bloque5 {
+
+.swiper-pagination-bloque5 {
     position: absolute;
-    bottom: 2px;
+    
     left: 0;
     right: 0;
     text-align: center;
@@ -131,9 +131,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px; /* Espacio entre los puntos */
-    margin-bottom: 6px;
-    margin-top: 0.5rem;
+    gap: 5px; 
+    margin-bottom: 20px;
+      
+    
    
 }
 
@@ -156,7 +157,7 @@
 
 /* Añade un hover opcional para los puntos */
 .swiper-pagination-bloque5 .swiper-pagination-bullet:hover {
-    background-color: #555; /* Oscurece el color al pasar el cursor */
+    background-color:red; /* Oscurece el color al pasar el cursor */
     opacity: 0.8;
 }
 

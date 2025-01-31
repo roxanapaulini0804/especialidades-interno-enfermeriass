@@ -71,7 +71,7 @@
     .swiper-wrapper {
         display: flex;
         transition: transform 0.3s ease-in-out;
-        gap: -2rem; /* Espaciado entre tarjetas */
+        gap: -4rem; /* Espaciado entre tarjetas */
     }
 
     .swiper-slide.card-movil {
@@ -79,7 +79,7 @@
       width: 80%; /* Ancho flexible basado en el contenedor */
       max-width: 250px; /* Máximo ancho para pantallas grandes */
       height: 320px; /* Altura automática basada en el contenido */
-      margin: 0px 20px;
+      margin: 0px 1px;
       background-color: #000; /* Fondo negro */
       color: #fff; /* Texto blanco */
       border-radius: 8px; /* Bordes redondeados */
@@ -118,7 +118,7 @@
             }
 
             a {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 margin-top: auto;
                 color: #fff;
                 justify-content: center;
@@ -131,7 +131,7 @@
             }
 
             button {
-                font-size: 1.6rem;
+                font-size: 1.3rem;
                 padding: 0.5rem;
                 background-color: #ff0000;
                 color: #fff;
@@ -143,8 +143,9 @@
                 justify-content: center;
                 display: flex;
                 flex-direction: column; 
-                margin-left:2.4rem;
+                margin-left:2.5rem;
                 transition: background-color 0.3s ease;
+                font-family: "Poppins", sans-serif;
                
 
                 &:hover {
@@ -156,18 +157,59 @@
 }
 
 
-    .swiper-pagination {
-      bottom: 10px;
-      text-align: center;
-      padding-top:-5rem;
-      color: #fff;
-    }
+    // .swiper-pagination {
+    //   bottom: 10px;
+    //   text-align: center;
+    //   padding-top:-5rem;
+    //   color: #fff;
+    // }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-      color: black;
+    // .swiper-button-prev,
+    // .swiper-button-next {
+    //   color: black;
      
-    }
+    // }
+
+    .swiper-pagination-bloque3 {
+      position: absolute;
+    
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px; 
+      margin-bottom: -30px;
+    
+     
+     
+  }
+  
+  /* Estilo para los puntos de paginación */
+  .swiper-pagination-bloque3 .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: #ccc; 
+      border-radius: 50%;
+      opacity: 0.5;
+      transition: all 0.3s ease;
+  }
+  
+  /* Punto activo */
+  .swiper-pagination-bloque3 .swiper-pagination-bullet-active {
+      background-color:red;
+      transform: scale(1.2); /* Tamaño más grande para el punto activo */
+      opacity: 1;
+  }
+  
+  /* Añade un hover opcional para los puntos */
+  .swiper-pagination-bloque3 .swiper-pagination-bullet:hover {
+      background-color:red; /* Oscurece el color al pasar el cursor */
+      opacity: 0.8;
+  }
+  
   }
 
   /* Grilla desktop */
