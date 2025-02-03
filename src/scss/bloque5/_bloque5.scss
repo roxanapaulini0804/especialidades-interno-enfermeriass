@@ -1,7 +1,6 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-/* General */
 .bloque5 {
     background-color: #000;
     color: #fff;
@@ -11,12 +10,9 @@
     justify-content: center;
     align-items: flex-start;
     position: relative; /* Asegura que todos los elementos se posicionen correctamente */
-    min-height: 500px; /* Ajusta la altura mínima del contenedor */
+    min-height: 470px; /* Ajusta la altura mínima del contenedor */
+    overflow: hidden; /* Evita el desbordamiento */
 }
-
-
-
-
 
 /* Título y subtítulo para móvil */
 .bloque5Left.bloque5Mobile {
@@ -41,12 +37,12 @@
     font-family: "Poppins", sans-serif;
 }
 
-
 /* Carrusel del bloque 5 */
 .bloque5Content.bloque5Mobile.swiper-bloque5 {
     position: relative;
     max-width: 350px;
     margin: 0 auto;
+    overflow: visible; /* Asegura que los slides sean visibles */
 }
 
 .bloque5Content.bloque5Mobile .swiper-wrapper {
@@ -55,13 +51,14 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-wrap: nowrap;
 }
 
 .bloque5Content.bloque5Mobile .swiper-slide {
-    min-width: 100%; /* Cada slide ocupa todo el ancho del contenedor */
+    flex: 0 0 100%; /* Ocupa todo el ancho del contenedor */
     display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     box-sizing: border-box;
 }
@@ -132,7 +129,7 @@
     justify-content: center;
     align-items: center;
     gap: 5px; 
-    margin-bottom: 20px;
+    margin-bottom: 13px;
       
     
    
@@ -295,5 +292,13 @@
         background-size: auto 125px; /* Ajustar el tamaño */
         background-position: right bottom; /* Pegado al lado derecho inferior */
         background-repeat: no-repeat; /* Evita que se repita la imagen */
+    }
+}
+
+
+/* Ocultar paginación en desktop */
+@media (min-width: 1000px) {
+    .swiper-pagination-bloque5 {
+        display: none;
     }
 }

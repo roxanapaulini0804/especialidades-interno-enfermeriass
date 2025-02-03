@@ -311,3 +311,20 @@
     display: grid !important; /* Fuerza a mostrar en escritorio */
   }
 }
+
+
+@media (min-width: 1020x) { // Ajusta el tamaño según necesites
+  .carousel-movil {
+      display: none;
+  }
+}
+@media (max-width: 1023px) { // Ajusta según el punto de quiebre
+  .carousel-desktop {
+      display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .swiper-pagination-bloque3 {
+    display: none !important;
+  }
+}
