@@ -191,7 +191,7 @@
   .swiper-pagination-bloque3 .swiper-pagination-bullet {
       width: 12px;
       height: 12px;
-      background-color: #ccc; 
+      background-color: black; 
       border-radius: 50%;
       opacity: 0.5;
       transition: all 0.3s ease;
@@ -204,22 +204,37 @@
       opacity: 1;
   }
   
-  /* Añade un hover opcional para los puntos */
-  .swiper-pagination-bloque3 .swiper-pagination-bullet:hover {
-      background-color:red; /* Oscurece el color al pasar el cursor */
-      opacity: 0.8;
-  }
+  // /* Añade un hover opcional para los puntos */
+  // .swiper-pagination-bloque3 .swiper-pagination-bullet:hover {
+  //     background-color:red; /* Oscurece el color al pasar el cursor */
+  //     opacity: 0.8;
+  // }
   
   }
 
   /* Grilla desktop */
   .carousel-desktop {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(3, 1fr);
     gap:2rem;
     justify-content: center;
     align-items: start;
     padding: 1rem;
+    
+
+    @include m.desktop_1000{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include m.desktop_1020{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include m.desktop_1200{
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include m.desktop_1400 {
+      grid-template-columns: repeat(4, 0fr);
+    }
 
     .card-desktop {
       background-color: #000;
@@ -304,21 +319,21 @@
 
 @media (min-width: 1020px) {
   .bloque3 .carousel-movil {
-    display: none !important; /* Fuerza a ocultar en escritorio */
+    display: none !important;
   }
 
   .bloque3 .carousel-desktop {
-    display: grid !important; /* Fuerza a mostrar en escritorio */
+    display: grid !important; 
   }
 }
 
 
-@media (min-width: 1020x) { // Ajusta el tamaño según necesites
+@media (min-width: 1020x) { 
   .carousel-movil {
       display: none;
   }
 }
-@media (max-width: 1023px) { // Ajusta según el punto de quiebre
+@media (max-width: 1023px) { 
   .carousel-desktop {
       display: none;
   }

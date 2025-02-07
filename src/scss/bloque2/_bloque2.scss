@@ -32,11 +32,12 @@
 
   @include m.phone_320 {
     font-size:2rem ;
+    width: 20rem;
     
   }
   @include m.phone_460 {
     font-size:2rem ;
-    width: 20rem;
+    width: 30rem;
     
   }
   @include m.tablet_700 {
@@ -84,6 +85,7 @@ img.bloqueRojo {
       display: block; /* Mostrar en móviles */
   }
 }
+
 
 
 @media (min-width: 719px) {

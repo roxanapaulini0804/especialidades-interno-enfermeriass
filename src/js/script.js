@@ -27,16 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// Scroll hacia el formulario
-function scrollToForm() {
-    const formElement = document.querySelector(".bloque1Form");
-    if (formElement) {
-        formElement.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        });
-    }
-}
+
 
 
     // Inicialización de Swiper para bloque 5
